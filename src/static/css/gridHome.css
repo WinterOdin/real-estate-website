@@ -1,18 +1,21 @@
+
 .grid-container {
+    
     display: grid;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 0.7fr 1.8fr;
+    grid-template-rows: 0.5fr 0.5fr 1.5fr;
     gap: 0px 0px;
     grid-template-areas:
-      "navbarContainer navbarContainer navbarContainer navbarContainer"
+    "navContent navContent navContent navContent"
       "mainTextContainer mainTextContainer mainTextContainer mainTextContainer"
       "pictureContainer pictureContainer pictureContainer pictureContainer";
-      background: #95B3D3;
-      background: -webkit-linear-gradient(left, #95B3D3, #FBF0F6);
-      background: -moz-linear-gradient(left, #95B3D3, #FBF0F6);
-      background: linear-gradient(to right, #95B3D3, #FBF0F6);
+      background: #CDE9FF;
+      background: -webkit-linear-gradient(left, #CDE9FF, #FFF7F7);
+      background: -moz-linear-gradient(left, #CDE9FF, #FFF7F7);
+      background: linear-gradient(to right, #CDE9FF, #FFF7F7);
+      overflow: hidden;
   }
   .pictureContainer {
     display: grid;
@@ -28,20 +31,83 @@
     background-repeat: no-repeat;
     background-position: 25% 100%;
     background-size: 68%; 
+    overflow: hidden;
   }
-  .rightBottomText { grid-area: rightBottomText; }
+  .rightBottomText { grid-area: rightBottomText; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
   .winterodinContainer { grid-area: winterodinContainer; }
   .mainTextContainer {
     display: grid;
     grid-template-columns: 0.5fr 1.5fr 0.5fr 1fr;
-    grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
       "leftText textMain . rightText"
       "leftText textMain . rightText";
     grid-area: mainTextContainer;
+    
   }
+
   .textMain { grid-area: textMain; }
   .leftText { grid-area: leftText; }
   .rightText { grid-area: rightText; }
-  .navbarContainer { grid-area: navbar;}
+  .navContent { grid-area: navContent;
+    width: 100%;
+    height: 100%;
+
+  }
+
+
+  @media (max-width: 770px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr 1.5fr 1fr 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        "navContent"
+        "mainTextContainer"
+        "pictureContainer"
+        "pictureContainer";
+    }
+    .navContent { grid-area: navContent; }
+    .mainTextContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        ". textMain textMain textMain ."
+        ". textMain textMain textMain .";
+      grid-area: mainTextContainer;
+   
+    }
+    .textMain { grid-area: textMain; }
+    .pictureContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+        ". . textOnMobile textOnMobile textOnMobile"
+        ". . rightBottomText rightBottomText rightBottomText";
+      grid-area: pictureContainer;
+      width: 100vw;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: 160%;
+      background-position: 100% 100%;
+      overflow: hidden;
+    }
+    .rightBottomText { grid-area: rightBottomText; }
+    .winterodinContainer { grid-area: winterodinContainer; }
+    .rightText { grid-area: rightText; }
+    .textOnMobile { grid-area: textOnMobile;
+    width: 100%;
+   height: 100%; }
+  }

@@ -1,0 +1,77 @@
+.textContent{
+    width: 60%;
+    height: 60%;
+    margin-left: 40%;
+    font-family: 'Saira', sans-serif;
+    font-size: 7vh;
+    font-weight: 700;
+    color: rgb(25, 25, 80);
+    line-height: 120%;
+}
+.lineContent{
+    width: 60%;
+    height: 40%;
+    margin-top: 3vh;
+    margin-left: 40%;
+
+}
+.textContentBlue{
+    color:rgb(0, 0, 255);
+}
+.leftTextContent{
+    width: 60%;
+    font-family: 'Saira', sans-serif;
+    height: 60%;
+    margin-left: 40%;
+    margin-top: 20%;
+    color: rgb(25, 25, 80);
+    font-size: 2.5vh;
+    letter-spacing: -1px;
+    font-weight: 500;
+    text-align: left;
+}
+.lineTextContainer{
+    height:5px;
+    background-color:rgb(25, 25, 80);
+    width: 100%;
+
+    margin-top: 8%;
+}
+.linkContainer{
+    color:rgb(25, 25, 80);
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+}
+.rightBottomContainer{
+    width: 80%;
+    margin-left:20%;
+    height: 100%;
+    background-color: rgb(0, 0, 196);
+}
+.winterContent{
+    width: 60%;
+    height: 100%;
+    margin-left: 5%;    
+}
+.winterCircle {
+    width: 150px;
+    height: 150px;
+    padding-top: 45px;
+    border-radius: 50%;
+    font-size: 18px;
+    text-align: center;
+    color: rgb(0, 0, 78);
+    border: 1px rgb(0, 0, 78) solid;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-left: 20%;
+    margin-top: 30%;
+  }
+.winterodinLink {
+    color: rgb(0, 0, 78);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    
+}

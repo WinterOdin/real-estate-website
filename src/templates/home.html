@@ -2,6 +2,7 @@
 {% extends 'base.html' %}
 {% load static  %}
 {% block content %}
+
 <div class="grid-container">
     <div class="pictureContainer"  style="background-image: url({% static 'images/back.png' %})">
       <div class="rightBottomText" >
@@ -11,11 +12,31 @@
                 <div class="col-1">
 
                 </div>
-                <div class="col-5">
-                  City
+                <div class="col-4">
+                  <div class="rightBottomContainerText">
+                    City
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="rightBottomContainerText rightBottomContainerTextBold">
+                    New York
+                  </div>
+                </div>
+                
+              </div>
+              <div class="row">
+                <div class="col-1">
+
+                </div>
+                <div class="col-4">
+                  <div class="rightBottomContainerText">
+                    Duration
+                  </div>
                 </div>
                 <div class="col-5">
-                  New York
+                  <div class="rightBottomContainerText rightBottomContainerTextBold">
+                    2 years
+                  </div>
                 </div>
                 <div class="col-1">
 
@@ -25,28 +46,20 @@
                 <div class="col-1">
 
                 </div>
-                <div class="col-5">
-                  Duration
+                <div class="col-4">
+                  <div class="rightBottomContainerText">
+                    Space
+                  </div>
                 </div>
-                <div class="col-5">
-                  2 years
+                <div class="col-4">
+                  <div class="rightBottomContainerText rightBottomContainerTextBold">
+                    2000m2
+                  </div>
                 </div>
-                <div class="col-1">
-
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-1">
-
-                </div>
-                <div class="col-5">
-                  Space
-                </div>
-                <div class="col-5">
-                  20000m2
-                </div>
-                <div class="col-1">
-
+                <div class="col-3">
+                  <div class="mkpGroupRightBottom">
+                    MKP Group 
+                  </div>
                 </div>
               </div>
             </div>
@@ -57,6 +70,13 @@
           <div class="winterCircle">2020<br /><a class='winterodinLink'href="#">winterodin</a></div>
         </div>
       </div>
+
+      <div class="textOnMobile">
+         <div class="leftTextContent">
+          New way to housing market with MKP real estate.
+        </div>
+      </div>
+
     </div>
 
 
@@ -90,9 +110,20 @@
           New way to housing market with MKP real estate.
         </div>
       </div>
-      <div class="rightText"></div>
+      <div class="rightText">
+        <div class="rightPictureContainer">
+          <div class="rightPictureContent" style="background-image: url({% static 'images/rightPic.jpg' %})" >
+          </div>
+          <div class="rightPictureContentText">
+            Minimalistic form of future cities.
+          </div>
+
+        </div>
+      </div>
     </div>
-    <div class="navbarContainer"></div>
+    <div class="navContent">
+      <div class="navContentContainer"></div>
+    </div>
 </div>
 
 
