@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block content %}
+
+
+<div class="grid-container-broker">
+  <div class="leftCol">leftCol</div>
+  <div class="mainCol">
+    <div class="propertyCount">
+      108 Properties found
+    </div>
+    <div class="container-fluid ">
+      <div class="row ">
+        <div class="col-md-6">
+          {% include 'apartmentList.html' %}
+        </div>
+        <div class="col-md-6">
+          {% include 'apartmentList.html' %}
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-md-6">
+          {% include 'apartmentList.html' %}
+        </div>
+        <div class="col-md-6">
+          {% include 'apartmentList.html' %}
+        </div>
+      </div>
+      <div class="row ">
+        <div class="col-md-6">
+          {% include 'apartmentList.html' %}
+        </div>
+        <div class="col-md-6">
+          {% include 'apartmentList.html' %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rightCol">
+    rightCol
+  </div>
+  <div class="topCol">
+    <div class="topLeftCol">
+      <div class="MKPWrapper">
+        <div class="MKPLogo">
+          MKP Group
+        </div>
+        <div class="MKPSlogan">
+          <div class="weightTopCol">
+            &nbsp; Buy &nbsp;
+          </div>
+          <div class="weightTopCol">
+            &nbsp;Rent&nbsp;
+          </div>
+          <div class="weightTopColBold">
+            &nbsp;Sell&nbsp;
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mainTopCol">
+      <div class="mainTopInsideCol">
+        <div class="weightTopColBold">
+          &nbsp; <i class="fas fa-home"></i>&nbsp;
+        </div>
+        <div class="weightTopColBold">
+         Find 
+        </div>
+        <div class="weightTopCol">
+          &nbsp; your property, Community 
+        </div>
+        
+
+        
+      </div>
+      <div class="topRightCol">
+        ddDDeef
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock  %}
+
+

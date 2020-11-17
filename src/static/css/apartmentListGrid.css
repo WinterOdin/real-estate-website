@@ -1,0 +1,67 @@
+.grid-container-tile {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "tileWrapper";
+      padding-bottom: 5%;
+  }
+  .tileWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.3fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "tilePictureWrapper"
+      "tileContentWrapper";
+    grid-area: tileWrapper;
+  }
+  .tilePictureWrapper { grid-area: tilePictureWrapper; }
+  .tileContentWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 0,5fr 0,5fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "propertyTypeWrapper propertyTypeWrapper propertyTypeWrapper"
+      "propertyLocationWrapper propertyLocationWrapper propertyLocationWrapper"
+      "propertyInfoWrapper propertyInfoWrapper propertyInfoWrapper"
+      "propertyPriceWrapper propertyPriceWrapper propertyPriceWrapper";
+    grid-area: tileContentWrapper;
+  }
+  .propertyTypeWrapper { grid-area: propertyTypeWrapper; }
+  .propertyLocationWrapper { grid-area: propertyLocationWrapper; }
+  .propertyInfoWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "bathsWrapper bedsWrapper areaWrapper";
+    grid-area: propertyInfoWrapper;
+  }
+  .bathsWrapper { 
+    grid-area: bathsWrapper;
+    width: 100%;
+  
+  }
+  .bedsWrapper { 
+    width: 100%;
+    grid-area: bedsWrapper;
+   }
+  .areaWrapper { 
+    width: 100%;
+    grid-area: areaWrapper; 
+  }
+  .propertyPriceWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "priceTextWrapper propertyContentWrapper";
+    grid-area: propertyPriceWrapper;
+  }
+  .priceTextWrapper { grid-area: priceTextWrapper; }
+  .propertyContentWrapper { grid-area: propertyContentWrapper; width: 100%;}

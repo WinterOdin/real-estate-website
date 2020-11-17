@@ -3,7 +3,7 @@
 {% load static  %}
 {% block content %}
 
-<div class="grid-container">
+<div class="grid-container-home">
     <div class="pictureContainer"  style="background-image: url({% static 'images/back.png' %})">
       <div class="rightBottomText" >
         <div class="rightBottomContainer">
@@ -95,7 +95,7 @@
   
               </div>
               <div class="col-5">
-                  <a href="#" class="linkContainer">BROWSE</a>
+                  <a href="{% url 'apartments'  %}" class="linkContainer">BROWSE</a>
               </div>
             </div>
           </div>
@@ -122,7 +122,9 @@
       </div>
     </div>
     <div class="navContent">
-      <div class="navContentContainer"></div>
+      <div class="navContentContainer">
+        {% include 'navbar.html'  %}
+      </div>
     </div>
 </div>
 

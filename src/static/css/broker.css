@@ -1,0 +1,84 @@
+.propertyCount{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    padding-left: 3%;
+}
+
+
+
+.MKPWrapper{
+    width: 100%;
+    height: 100%;
+
+
+}
+.MKPLogo{
+    font-weight: 700;
+    color: rgb(55, 118, 255);
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgb(219, 219, 219);
+ 
+}
+.MKPSlogan{
+    width: 60%;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgb(219, 219, 219);
+}
+.weightTopCol{
+    font-weight: 600;
+    opacity: 0.5;
+    float: left;
+}
+.weightTopColBold{
+    font-weight: 700;
+    float: left;
+    
+}
+.mainTopInsideCol{
+    font-size: 18px;
+    border-right: 1px solid rgb(219, 219, 219);
+    display: flex;
+    padding-left: 2%;
+    align-items: center;
+    letter-spacing: -1px;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-border-radius: 100px
+}
+
+::-webkit-scrollbar:hover {
+    background-color: rgba(0, 0, 0, .09)
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, .5);
+    -webkit-border-radius: 100px
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, .61);
+    -webkit-border-radius: 100px
+}
