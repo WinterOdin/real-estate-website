@@ -1,0 +1,59 @@
+.containerButtonsProperty{
+    width: 80%;
+    margin-left: 10%;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    height: 13vh;
+}
+.buttonPositionProperty{
+    width: 50%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul.ks-cboxtags {
+    list-style: none;
+    margin-bottom: 0 !important;
+}
+ul.ks-cboxtags li{
+  display: inline;
+}
+ul.ks-cboxtags li label{
+    display: inline-block;
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, .9);
+    border: 2px solid rgba(139, 139, 139, .3);
+    color: rgb(68, 68, 68);
+    border-radius: 14px;
+    white-space: nowrap;
+    margin: 5px 0px;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    transition: all .2s;
+}
+
+ul.ks-cboxtags li label {
+    text-align: center;
+    padding: 8px;
+    width: 7vw;
+    cursor: pointer;
+}
+ul.ks-cboxtags li input[type="checkbox"]:checked + label {
+    border: 2px solid rgb(55, 118, 255);
+    background-color: rgb(250, 250, 255);
+    color: rgb(55, 118, 255);
+    transition: all .2s;
+}
+
+ul.ks-cboxtags li input[type="checkbox"] {
+  display: absolute;
+}
+ul.ks-cboxtags li input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
