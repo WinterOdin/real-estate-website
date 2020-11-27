@@ -15,7 +15,11 @@ def home(request):
 def apartments(request):
     property_data = Property.objects.all()
     myFilter = PropertyFilter()
+    
     if request.method == 'GET':
+        request.GET = request.GET.copy()
+        request.GET['placce']
+
         filtera = PropertyFilter(request.GET, queryset=property_data)
         property_data = filtera.qs
 

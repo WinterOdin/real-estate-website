@@ -7,4 +7,4 @@ class PropertyFilter(django_filters.FilterSet):
 	class Meta:
 		model = Property
 		fields = '__all__'
-		exclude = ['about', 'street']
+		exclude = ['about', 'street','pic']

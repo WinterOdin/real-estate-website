@@ -31,7 +31,7 @@
     grid-area: tileContentWrapper;
   }
   .propertyTypeWrapper { grid-area: propertyTypeWrapper; }
-  .propertyLocationWrapper { grid-area: propertyLocationWrapper; }
+  .propertyLocationWrapper { grid-area: propertyLocationWrapper;cursor: pointer; }
   .propertyInfoWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

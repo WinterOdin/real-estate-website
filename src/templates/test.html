@@ -1,0 +1,44 @@
+
+<script>
+    var map;
+    var marker;
+    var location1 = {
+      lat: 45.123456,
+      lng: 3.456789
+    };
+    var location2 = {
+      lat: 46.234567,
+      lng: 4.567890
+    };
+    var location3 = {
+      lat: 47.345678,
+      lng: 5.678901
+    };
+  
+    function initMap() {
+      var myOptions = {
+        zoom: 13,
+        center: location1,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+  
+      map = new google.maps.Map(document.getElementById('map'), myOptions);
+  
+      marker = new google.maps.Marker({
+        position: location1,
+        map: map,
+        title: 'Click to zoom'
+      });
+    }
+  
+    function changeCenter(center) {
+        map.setCenter(center);
+        marker.setPosition(center);
+      }
+      // google.maps.event.addDomListener(window, "load", initMap);
+</script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+  
+  
+  
+  

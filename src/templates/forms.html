@@ -1,8 +1,9 @@
 <form method="GET">
+    {{ myFilter.form  }}
     <div class="propertyCount">
       Property type
     </div>
-    <div class="containerButtonsProperty">
+    <div class="containerButtons">
       <div class="buttonPositionProperty">
         <ul class="ks-cboxtags">
           <li><input type="checkbox" id="checkboxOne" value="propertyType" value="Apartment" class="inputProperty"><label for="checkboxOne">Apartment</label></li>
@@ -24,8 +25,94 @@
         </ul>
       </div>
     </div>
+    <div class="propertyCount">
+      Bedrooms
+    </div>
+    <div class="containerBedrooms">
+      <div class="buttonPositionBedrooms">
+        <ul class="ks-cboxtags">
+          <li><input type="checkbox" id="checkboxOneBedrooms" name="bedroomType" value="1" class="bedroomProperty">
+            <label class="labelBedrooms" for="checkboxOneBedrooms">1</label></li>
+        </ul>  
+      </div>
+      <div class="buttonPositionBedrooms">
+        <ul class="ks-cboxtags">
+          <li><input type="checkbox" id="checkboxTwoBedrooms" name="bedroomType" value="2" class="bedroomProperty">
+            <label class="labelBedrooms" for="checkboxTwoBedrooms">2</label></li>
+        </ul>  
+      </div>
+      <div class="buttonPositionBedrooms">
+        <ul class="ks-cboxtags">
+          <li><input type="checkbox" id="checkboxThreeBedrooms" name="bedroomType" value="3" class="bedroomProperty">
+            <label class="labelBedrooms" for="checkboxThreeBedrooms">3</label></li>
+        </ul>  
+      </div>
+       <div class="buttonPositionBedrooms">
+        <ul class="ks-cboxtags">
+          <li><input type="checkbox" id="checkboxFourBedrooms" name="bedroomType" value="4" class="bedroomProperty">
+            <label class="labelBedrooms" for="checkboxFourBedrooms">4+</label></li>
+        </ul>  
+      </div>
+    </div>
+    <div class="propertyCount">
+      Furnishing
+    </div>
+    <div class="containerBedrooms">
+      <div class="buttonPositionFurnish">
+        <ul class="ks-cboxtags">
+          <li><input type="checkbox" id="checkboxOneFurnished" name="bedroomType" value="furnished" class="furnishedProperty">
+            <label for="checkboxOneFurnished">Furnished</label></li>
+        </ul>  
+      </div>
+      <div class="buttonPositionFurnish">
+        <ul class="ks-cboxtags">
+          <li><input type="checkbox" id="checkboxTwoFurnished" name="bedroomType" value="unfurnished" class="furnishedProperty">
+            <label for="checkboxTwoFurnished">Unfurnished</label></li>
+        </ul>  
+      </div>
+    </div>
+
+
+
 
     <button class="btn btn-primary" type="submit">
       search
     </button>
   </form>
+
+<!----
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+      <title>range</title>
+    
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css">
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
+    
+      
+    </head>
+    <body>
+    <div class="container">
+      <div class="row">
+    
+    
+      
+    
+    
+        <div class="col-md-6" style="margin-top: 50px;">
+          <div class="slider-wrapper slider-danger slider-strips slider-ghost">
+            <input class="input-range" type="text" data-slider-step="1" data-slider-value="14, 75" data-slider-min="0" data-slider-max="100" data-slider-range="true" data-slider-tooltip_split="true"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    </body>
+    </html>
+    ---->

@@ -1,15 +1,35 @@
-.containerButtonsProperty{
+.containerButtons,.containerBedrooms{
     width: 80%;
     margin-left: 10%;
     border-bottom: 1px solid rgb(240, 240, 240);
-    height: 13vh;
+}
+.containerButtons{
+  height: 13vh;
+}
+.containerBedrooms{
+  height: 7vh;
+}
+.propertyCount{
+  height: 5vh;
+  padding-top: 1vh;
+}
+.buttonPositionProperty,.buttonPositionBedrooms{  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .buttonPositionProperty{
-    width: 50%;
-    float: left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 50%;
+  float: left;
+  
+}
+.buttonPositionBedrooms{
+  float: left;
+  width: 23%;
+}
+.buttonPositionFurnish{
+  float: left;
+  width: 50%;
 }
 
 ul.ks-cboxtags {
@@ -43,9 +63,16 @@ ul.ks-cboxtags li label {
     width: 7vw;
     cursor: pointer;
 }
+ul.ks-cboxtags li label.labelBedrooms {
+  text-align: center;
+  padding: 8px;
+  width: 2.7vw;
+  cursor: pointer;
+}
+
 ul.ks-cboxtags li input[type="checkbox"]:checked + label {
     border: 2px solid rgb(55, 118, 255);
-    background-color: rgb(250, 250, 255);
+    background-color: rgb(244, 244, 255);
     color: rgb(55, 118, 255);
     transition: all .2s;
 }
@@ -56,4 +83,21 @@ ul.ks-cboxtags li input[type="checkbox"] {
 ul.ks-cboxtags li input[type="checkbox"] {
   position: absolute;
   opacity: 0;
+}
+@media (max-width: 770px) {
+  ul.ks-cboxtags li label {
+    padding: 8px;
+    width: 35vw;
+}
+ul.ks-cboxtags li label.labelBedrooms {
+  padding: 8px;
+  width: 15vw;
+}
+.containerButtons{
+  padding-bottom: 16vh;
+}
+.containerBedrooms{
+  padding-bottom: 9vh;
+}
+
 }

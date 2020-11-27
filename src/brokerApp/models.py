@@ -9,7 +9,6 @@ class Property(models.Model):
         ('Loft', 'Loft'),
     ]
     ROOMS = [
-        ('Studio', 'Studio'),
         ('1', '1'),
         ('2', '2'),
         ('3', '3'),
@@ -24,6 +23,8 @@ class Property(models.Model):
     beds        = models.CharField(max_length=10, null=True, choices=ROOMS)
     baths       = models.IntegerField(null=True, blank=True)
     price       = models.CharField(max_length=10, null=True, blank=True)
-    
+    latitude    = models.FloatField(null=True, blank=True)
+    longitude   = models.FloatField(null=True, blank=True)
+    pic         = models.ImageField(null=True, blank=True)
     
     

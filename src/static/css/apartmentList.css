@@ -11,7 +11,7 @@
 }
 .propertyTypeIcon,.propertyTypeText{
     font-size: 21px;
-    color: rgb(55, 118, 255);
+    color: #e4a471;
 }
 .propertyTypeText{
     padding-left: 3%;
@@ -57,6 +57,8 @@
     letter-spacing: 1px;
     color: black;
     opacity: 0.3;
+    height: 7vh;
+    
 }
 .propertyPriceWrapper{
     padding-top:2%; 
@@ -66,7 +68,7 @@
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 14px;
-    color: rgb(73, 100, 255);
+    color: rgb(127, 143, 235);
 }
 .propertyContentWrapper{
     font-family: 'Montserrat';
