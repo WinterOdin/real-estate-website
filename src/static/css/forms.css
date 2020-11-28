@@ -13,7 +13,7 @@
   height: 5vh;
   padding-top: 1vh;
 }
-.buttonPositionProperty,.buttonPositionBedrooms{  
+.buttonPositionProperty,.buttonPositionBedrooms,.buttonPositionPrice{  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,6 +31,68 @@
   float: left;
   width: 50%;
 }
+
+
+.containerPrice{
+  width: 90%;
+  margin-left: 5%;
+}
+
+.buttonPositionPrice{
+  float: left;
+  width: 50%; 
+}
+
+
+.inputPrice{
+  width: 90%;
+  height: 4.8vh;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, .9);
+  border: 2px solid rgba(139, 139, 139, .3);
+  color: rgb(68, 68, 68);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  white-space: nowrap;
+  padding-left: 20px;
+  text-align: left;
+  }
+  
+.inputPrice:focus {
+  outline: none;
+  border: 2px solid rgb(55, 118, 255);
+  background-color: rgb(244, 244, 255);
+  color: rgb(55, 118, 255);
+}
+
+.buttonPositionSearch{
+  float: left;
+  width: 50%; 
+  margin-top: 10%;
+}
+.searchButton{
+  width: 90%;
+  height: 4.8vh;
+  font-weight: 500;
+  background-color:#0072ff;
+  border:none;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  white-space: nowrap;
+  color: white;
+  text-align: center;
+}
+.whiteButton{
+  background-color:#ffffff;
+  color: rgb(68, 68, 68);
+  border: 2px solid rgba(139, 139, 139, .3);
+}
+.whiteLink,.whiteLink:hover{
+ color: white;
+}
+
 
 ul.ks-cboxtags {
     list-style: none;
@@ -84,7 +146,44 @@ ul.ks-cboxtags li input[type="checkbox"] {
   position: absolute;
   opacity: 0;
 }
-@media (max-width: 770px) {
+
+@media (max-width: 1500px) {
+
+.containerButtons,.containerBedrooms{
+    width: 90%;
+    margin-left: 5%;
+}
+  ul.ks-cboxtags li label {
+    padding: 8px;
+    width: 9vw;
+}
+ul.ks-cboxtags li label.labelBedrooms {
+  width: 3.5vw;
+}
+
+@media (max-width: 1300px) {
+
+  .containerButtons,.containerBedrooms{
+      width: 90%;
+      margin-left: 5%;
+  }
+    ul.ks-cboxtags li label {
+      padding: 8px;
+      width: 9vw;
+  }
+  ul.ks-cboxtags li label.labelBedrooms {
+    width: 3.5vw;
+  }
+  ul.ks-cboxtags li label{
+    font-size: 14px;
+}
+.searchButton{
+  font-size: 14px;
+}
+}
+
+@media (max-width: 1000px) {
+
   ul.ks-cboxtags li label {
     padding: 8px;
     width: 35vw;
@@ -100,4 +199,24 @@ ul.ks-cboxtags li label.labelBedrooms {
   padding-bottom: 9vh;
 }
 
+}
+
+::-webkit-input-placeholder { 
+  font-weight: 500;
+  color: rgb(68, 68, 68);
+}
+::-moz-placeholder { 
+  font-weight: 500;
+  
+  color: rgb(68, 68, 68);
+}
+:-ms-input-placeholder { 
+  font-weight: 500;
+  color: rgb(68, 68, 68);
+  
+}
+:-moz-placeholder {
+  font-weight: 500;
+  
+  color: rgb(68, 68, 68);
 }

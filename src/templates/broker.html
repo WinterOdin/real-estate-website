@@ -3,6 +3,7 @@
 {% block content %}
 <div class="grid-container-broker">
   <div class="leftCol">
+    <div class="leftColPosition">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -11,8 +12,9 @@
       </div>
     </div>
   </div>
+  </div>
   <div class="mainCol">
-    <div class="formMobile" style="display: none;">
+    <div class="formMobile" style="display: none; ">
       {% include 'forms.html'  %}
     </div>
     <div class="propertyCount">
@@ -69,24 +71,40 @@
 <script>
       var map;
       var marker;
+
+
       {% for x in data  %}
       var location{{x.id}} = {
         lat: {{ x.latitude  }},
         lng: {{ x.longitude }}
       };
+
+
+
       {% endfor  %}
       function initMap() {
         var myOptions = {
           zoom: 13,
-          center: location1,
+          center: 
+          {% for x in data  %}
+          location{{x.id}},
+          {% endfor  %}
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
+
+
+
         map = new google.maps.Map(document.getElementById('map'), myOptions);
         marker = new google.maps.Marker({
-          position: location1,
+          position:
+          {% for x in data  %}
+          location{{x.id}},
+          {% endfor  %}
           map: map,
           title: 'Click to zoom'
         });
+
+        
       }
       function changeCenter(center) {
           map.setCenter(center);

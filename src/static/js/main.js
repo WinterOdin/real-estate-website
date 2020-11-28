@@ -7,6 +7,9 @@
     $('.furnishedProperty').on('change', function() {
     $('.furnishedProperty').not(this).prop('checked', false);
   });
+  $('.bathProperty').on('change', function() {
+    $('.bathProperty').not(this).prop('checked', false);
+  });
 $(".expander").click(function(){
     $(".formMobile").slideToggle();
   });

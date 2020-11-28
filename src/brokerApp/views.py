@@ -17,8 +17,6 @@ def apartments(request):
     myFilter = PropertyFilter()
     
     if request.method == 'GET':
-        request.GET = request.GET.copy()
-        request.GET['placce']
 
         filtera = PropertyFilter(request.GET, queryset=property_data)
         property_data = filtera.qs
@@ -28,3 +26,14 @@ def apartments(request):
         'data':property_data
     }
     return render(request,'broker.html', context)
+
+def apartmentDetail(request,pk):
+
+    property_data = Property.objects.filter(id=pk)
+
+
+
+    context={
+        'data':property_data
+    }
+    return render(request,'detailView.html', context)

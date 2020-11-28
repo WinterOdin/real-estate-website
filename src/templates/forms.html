@@ -1,27 +1,27 @@
-<form method="GET">
-    {{ myFilter.form  }}
+<div class="zIndexForm">
+  <form method="GET">
     <div class="propertyCount">
       Property type
     </div>
     <div class="containerButtons">
       <div class="buttonPositionProperty">
         <ul class="ks-cboxtags">
-          <li><input type="checkbox" id="checkboxOne" value="propertyType" value="Apartment" class="inputProperty"><label for="checkboxOne">Apartment</label></li>
+          <li><input type="checkbox" id="checkboxOne" name="place_type" value="Apartment" class="inputProperty"><label for="checkboxOne">Apartment</label></li>
         </ul>  
       </div>
       <div class="buttonPositionProperty">
         <ul class="ks-cboxtags">
-          <li><input type="checkbox" id="checkboxTwo" value="propertyType" value="Town house" class="inputProperty" ><label for="checkboxTwo">Town house</label></li>
+          <li><input type="checkbox" id="checkboxTwo" name="place_type" value="Townhouse" class="inputProperty" ><label for="checkboxTwo">Town house</label></li>
         </ul>
       </div>
       <div class="buttonPositionProperty">
         <ul class="ks-cboxtags">
-          <li><input type="checkbox" id="checkboxThree" value="propertyType" value="Whole bulding" class="inputProperty"><label for="checkboxThree">Whole bulding</label></li>
+          <li><input type="checkbox" id="checkboxThree"name="place_type" value="Whole bulding" class="inputProperty"><label for="checkboxThree">Whole bulding</label></li>
         </ul>
       </div>
       <div class="buttonPositionProperty">
         <ul class="ks-cboxtags">
-          <li><input type="checkbox" id="checkboxFour" value="propertyType"  value="Loft" class="inputProperty"><label for="checkboxFour">Loft</label></li>
+          <li><input type="checkbox" id="checkboxFour" name="place_type"  value="Loft" class="inputProperty"><label for="checkboxFour">Loft</label></li>
         </ul>
       </div>
     </div>
@@ -31,25 +31,25 @@
     <div class="containerBedrooms">
       <div class="buttonPositionBedrooms">
         <ul class="ks-cboxtags">
-          <li><input type="checkbox" id="checkboxOneBedrooms" name="bedroomType" value="1" class="bedroomProperty">
+          <li><input type="checkbox" id="checkboxOneBedrooms" name="beds" value="1" class="bedroomProperty">
             <label class="labelBedrooms" for="checkboxOneBedrooms">1</label></li>
         </ul>  
       </div>
       <div class="buttonPositionBedrooms">
         <ul class="ks-cboxtags">
-          <li><input type="checkbox" id="checkboxTwoBedrooms" name="bedroomType" value="2" class="bedroomProperty">
+          <li><input type="checkbox" id="checkboxTwoBedrooms" name="beds" value="2" class="bedroomProperty">
             <label class="labelBedrooms" for="checkboxTwoBedrooms">2</label></li>
         </ul>  
       </div>
       <div class="buttonPositionBedrooms">
         <ul class="ks-cboxtags">
-          <li><input type="checkbox" id="checkboxThreeBedrooms" name="bedroomType" value="3" class="bedroomProperty">
+          <li><input type="checkbox" id="checkboxThreeBedrooms" name="beds" value="3" class="bedroomProperty">
             <label class="labelBedrooms" for="checkboxThreeBedrooms">3</label></li>
         </ul>  
       </div>
-       <div class="buttonPositionBedrooms">
+      <div class="buttonPositionBedrooms">
         <ul class="ks-cboxtags">
-          <li><input type="checkbox" id="checkboxFourBedrooms" name="bedroomType" value="4" class="bedroomProperty">
+          <li><input type="checkbox" id="checkboxFourBedrooms" name="beds" value="4+" class="bedroomProperty">
             <label class="labelBedrooms" for="checkboxFourBedrooms">4+</label></li>
         </ul>  
       </div>
@@ -60,59 +60,73 @@
     <div class="containerBedrooms">
       <div class="buttonPositionFurnish">
         <ul class="ks-cboxtags">
-          <li><input type="checkbox" id="checkboxOneFurnished" name="bedroomType" value="furnished" class="furnishedProperty">
+          <li><input type="checkbox" id="checkboxOneFurnished" name="furnishType" value="furnished" class="furnishedProperty">
             <label for="checkboxOneFurnished">Furnished</label></li>
         </ul>  
       </div>
       <div class="buttonPositionFurnish">
         <ul class="ks-cboxtags">
-          <li><input type="checkbox" id="checkboxTwoFurnished" name="bedroomType" value="unfurnished" class="furnishedProperty">
+          <li><input type="checkbox" id="checkboxTwoFurnished" name="furnishType" value="unfurnished" class="furnishedProperty">
             <label for="checkboxTwoFurnished">Unfurnished</label></li>
         </ul>  
       </div>
     </div>
-
-
-
-
-    <button class="btn btn-primary" type="submit">
-      search
-    </button>
-  </form>
-
-<!----
-  <html>
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
-      <title>range</title>
-    
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.min.css">
-    
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/bootstrap-slider.min.js"></script>
-    
-      
-    </head>
-    <body>
-    <div class="container">
-      <div class="row">
-    
-    
-      
-    
-    
-        <div class="col-md-6" style="margin-top: 50px;">
-          <div class="slider-wrapper slider-danger slider-strips slider-ghost">
-            <input class="input-range" type="text" data-slider-step="1" data-slider-value="14, 75" data-slider-min="0" data-slider-max="100" data-slider-range="true" data-slider-tooltip_split="true"/>
-          </div>
-        </div>
+    <div class="propertyCount">
+      Baths
+    </div>
+    <div class="containerBedrooms">
+      <div class="buttonPositionBedrooms">
+        <ul class="ks-cboxtags">
+          <li><input type="checkbox" id="checkboxOneBaths" name="baths" value="1" class="bathProperty">
+            <label class="labelBedrooms" for="checkboxOneBaths">1</label></li>
+        </ul>  
+      </div>
+      <div class="buttonPositionBedrooms">
+        <ul class="ks-cboxtags">
+          <li><input type="checkbox" id="checkboxTwoBaths" name="baths" value="2" class="bathProperty">
+            <label class="labelBedrooms" for="checkboxTwoBaths">2</label></li>
+        </ul>  
+      </div>
+      <div class="buttonPositionBedrooms">
+        <ul class="ks-cboxtags">
+          <li><input type="checkbox" id="checkboxThreeBaths" name="baths" value="3" class="bathProperty">
+            <label class="labelBedrooms" for="checkboxThreeBaths">3</label></li>
+        </ul>  
+      </div>
+      <div class="buttonPositionBedrooms">
+        <ul class="ks-cboxtags">
+          <li><input type="checkbox" id="checkboxFourBaths" name="baths" value="4+" class="bathProperty">
+            <label class="labelBedrooms" for="checkboxFourBaths">4+</label></li>
+        </ul>  
       </div>
     </div>
-    </body>
-    </html>
-    ---->
+    <div class="propertyCount">
+      Price range
+    </div>
+    <div class="containerPrice">
+      <div class="buttonPositionPrice">
+        <input type="text" class="inputPrice" id="id_price_0"   name="price_min" placeholder="Min">
+      </div>
+      <div class="buttonPositionPrice">
+          <input type="text" class="inputPrice" id="id_price_1" name="price_max" placeholder="Max">
+      </div>
+    </div>
+    <div class="containerPrice">
+      <div class="buttonPositionSearch">
+        <button class="searchButton whiteButton">
+        <a href="{% url 'apartments'  %}">RESET</a>
+        </button>
+      </div>
+      <div class="buttonPositionSearch">
+      <button class="searchButton">
+        APPLY
+      </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+  
+
+
+

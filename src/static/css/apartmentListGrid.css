@@ -17,7 +17,11 @@
       "tileContentWrapper";
     grid-area: tileWrapper;
   }
-  .tilePictureWrapper { grid-area: tilePictureWrapper; }
+  .tilePictureWrapper {
+     grid-area: tilePictureWrapper;
+     width: 100%;
+     height: 100%;
+     }
   .tileContentWrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -65,3 +69,20 @@
   }
   .priceTextWrapper { grid-area: priceTextWrapper; }
   .propertyContentWrapper { grid-area: propertyContentWrapper; width: 100%;}
+
+  @media (max-width: 1450px) {
+    .tileWrapper {
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .tileWrapper {
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+  @media (max-width: 500px) {
+    .tileWrapper {
+      grid-template-rows: 1.3fr 1fr;
+    }
+  }

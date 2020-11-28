@@ -18,7 +18,11 @@
     grid-area: leftCol;
     width: 100%;
     height: 100%;
-    background-color: rgb(252, 252, 252);
+  
+}
+.leftColPosition{
+  height: 80%;
+  margin-top: 10%;
 }
 .mainCol { 
     width: 100%;
@@ -60,7 +64,37 @@
 .mainTopInsideCol { grid-area: mainTopInsideCol; }
 .topRightCol { grid-area: topRightCol; }
 
-@media (max-width: 770px) {
+@media (max-width: 1500px) {
+  .grid-container-broker {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.7fr;
+    grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "topCol topCol topCol"
+      "leftCol mainCol rightCol"
+      "leftCol mainCol rightCol"
+      "leftCol mainCol rightCol"
+      "leftCol mainCol rightCol";
+      width: 100vw;
+      height: 100vh;
+      overflow-y: hidden;
+  }
+}
+@media (max-width: 1300px) {
+  .leftColPosition{
+    margin-top:15%;
+  }
+  .topCol {
+    height: 85%;
+  }
+}
+
+
+
+
+@media (max-width: 1000px) {
+
 
   .grid-container-broker {
     display: grid;

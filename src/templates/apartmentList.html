@@ -4,10 +4,18 @@
    <div class="grid-container-tile">
      <div class="tileWrapper">
        <div class="tilePictureWrapper">
+        <div class="overlayPicture">
+          <div class="overlayWrapper">
+            <div class="overlayText">
+              <a class="whiteLink" href="{% url 'apartmentDetail' pk=x.id %}">VIEW MORE</a>
+            </div>
+          </div>
+        </div>
          <div class="tilePictureContent" style="background-image: url({{ x.pic.url  }})">
-         </div>
+          
+        </div>
        </div>
-       <div class="tileContentWrapper">
+       <div class="tileContentWrapper" onclick="javascript:changeCenter(location{{ x.id  }});">
          <div class="propertyTypeWrapper">
            <div class="propertyTypeContent">
              <div class="propertyTypeIcon">
@@ -18,7 +26,7 @@
              </div>
            </div>
          </div>
-         <div id='{{ x.id  }}' onclick="javascript:changeCenter(location{{ x.id  }});" class="propertyLocationWrapper">
+         <div id='{{ x.id  }}'  class="propertyLocationWrapper">
            <div class="propertyLocationText">
             {{ x.street }} {{ x.city }}  
            </div>

@@ -67,8 +67,14 @@
     margin-left: 1%;
 }
 
+@media (max-width: 1300px) {
+    .MKPLogo{
+        font-size: 14px;
+    }
+  }
 
-@media (max-width: 770px) {
+
+@media (max-width: 1000px) {
     .MKPLogo{
         width: 30%;
     }
@@ -82,6 +88,9 @@
         align-items: center;
         width: 20%;
         height: 100%;
+    }
+    .formMobile{
+        display: none;
     }
 
 }
