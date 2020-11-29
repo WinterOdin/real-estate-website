@@ -1,0 +1,101 @@
+
+   .grid-container-generated{
+     width: 100vw;
+     height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "leftContent leftContent rightContent rightContent"
+      "leftContent leftContent rightContent rightContent"
+      "leftContent leftContent rightContent rightContent"
+      "bottomLeftContent bottomLeftContent rightContent rightContent";
+  }
+  .leftContent { grid-area: leftContent; }
+  .rightContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . linkContent ."
+      "rightTextContent rightTextContent rightTextContent ."
+      "rightTextContent rightTextContent rightTextContent ."
+      "propertyInfo propertyInfo . ."
+      "propertyInfo propertyInfo . bottomArrow";
+    grid-area: rightContent;
+  }
+  .rightTextContent { 
+    width: 100%;
+    height: 100%;
+    grid-area: rightTextContent; }
+  .linkContent {
+   grid-area: linkContent; 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+  .propertyInfo { 
+    width: 100%;
+    height: 100%;
+    grid-area: propertyInfo; }
+  .bottomArrow {
+    width: 100%;
+    height: 100%; 
+    grid-area: bottomArrow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+  .bottomLeftContent {
+    width: 100%;
+    height: 100%;
+     grid-area: bottomLeftContent; }
+
+
+     @media (max-width: 1000px) {
+      .linkContent {
+        display: none;
+      }
+      .grid-container-generated{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 0.5fr 0.5fr 1.5fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+          "leftContent"
+          "leftContent"
+          "leftContent"
+          "bottomLeftContent"
+          "rightContent"
+          "rightContent"
+          "rightContent";
+      }
+      
+      .leftContent { 
+        grid-area: leftContent;
+        height: 100%;
+       }
+      
+      .bottomLeftContent { grid-area: bottomLeftContent; }
+      
+      .rightContent {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 0.5fr 1.5fr;
+        gap: 0px 0px;
+        grid-template-areas:
+          "rightTextContent rightTextContent rightTextContent rightTextContent rightTextContent"
+          "rightTextContent rightTextContent rightTextContent rightTextContent rightTextContent"
+          "propertyInfo propertyInfo propertyInfo propertyInfo bottomArrow";
+        grid-area: rightContent;
+      }
+      .rightTextContent { grid-area: rightTextContent; }
+      .propertyInfo { grid-area: propertyInfo; }
+      .bottomArrow { grid-area: bottomArrow; 
+        align-items: flex-end;}
+     }
+   
+     

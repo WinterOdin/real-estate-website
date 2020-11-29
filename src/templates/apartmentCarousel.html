@@ -1,0 +1,152 @@
+<!-------
+
+I've reused this from my amg car rental project becouse i like the design and i don;t have much time
+
+-->
+{% load static %}
+
+<div class="container conPosCar">
+    <div class="row">
+        <div class="col-md-9 col-sm-12">
+            <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
+                <!-- slides -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active"><img src="{% static 'images/pic2.jpg' %}" alt="Hills" /></div>
+                    <div class="carousel-item"><img src="{% static 'images/pic3.jpg' %}" alt="Hills" /></div>
+                    <div class="carousel-item"><img src="{% static 'images/pic4.jpg' %}" alt="Hills" /></div>
+                    <div class="carousel-item"><img src="{% static 'images/pic5.jpg' %}" alt="Hills" /></div>
+                </div>
+                <!-- Left right -->
+                <a class="carousel-control-prev maxsizeCar" href="#custCarousel" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a>
+                <a class="carousel-control-next maxsizeCar" href="#custCarousel" data-slide="next"> <span class="carousel-control-next-icon"></span> </a>
+                <!-- Thumbnails -->
+                <ol class="carousel-indicators list-inline">
+                    <li class="list-inline-item active">
+                        <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel">
+                            <img src="{% static 'images/pic2.jpg' %}" class="img-fluid-check" />
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel">
+                            <img src="{% static 'images/pic3.jpg' %}" class="img-fluid-check" />
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel">
+                            <img src="{% static 'images/pic4.jpg' %}" class="img-fluid-check" />
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a id="carousel-selector-2" data-slide-to="3" data-target="#custCarousel">
+                            <img src="{% static 'images/pic5.jpg' %}" class="img-fluid-check" />
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="carPricePos">
+                        <div class="carPrice">
+                            <span class="align-middle"><i>{{ x.price }}$ per month</i></span>
+                        </div>
+                        <div class="texesPriceCar">
+                            <span class="align-middle">Included Taxes & Insurance </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="reserveMobile">
+                        <a href="#" class="btn btn-sm animated-button thar-three">Book this car</a>
+                    </div>
+                    <div class="contactCar">
+                        <i class="fas fa-paper-plane"></i> <span class="textCar"><i>CONTACT US</i></span>
+                    </div>
+                    <form id="contact-form" class="form" action="#" method="POST" role="form">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Your name" tabindex="1" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" placeholder="Your Email" tabindex="2" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="number" placeholder="Phone Number" tabindex="3" />
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="2" cols="10" name="message" class="form-control textareaCar" id="message" placeholder="Message..." tabindex="4" required></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <div class="buttonCar">
+                                    <a href="" type="submit" class="btn btn-sm animated-button thar-three">Contact the seller</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9 col-sm-12">
+            <div class="aboutCar">
+                <div class="overviewCar">Quick overview</div>
+                <div class="overviewTextCar">
+                    {{ x.about }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12">
+            <div class="containerCrossCar">
+                <div class="row no-gutters">
+                    <div class="col-6">
+                        <div class="infoCar1">
+                            <div class="iconCar">
+                                <i class="fas fa-bed iconStyleCar"></i>
+                            </div>
+                            <div class="textIconCar">
+                                {{ x.beds }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="infoCar2">
+                            <div class="iconCar">
+                                <i class="fas fa-bath iconStyleCar"></i>
+                            </div>
+                            <div class="textIconCar">
+                                {{ x.baths }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-6">
+                        <div class="infoCar3">
+                            <div class="iconCar">
+                                <i class="fas fa-layer-group iconStyleCar"></i>
+                            </div>
+                            <div class="textIconCar">
+                                {{ x.size }}sqft
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="infoCar4">
+                            <div class="iconCar">
+                                <i class="fas fa-dollar-sign iconStyleCar"></i>>
+                            </div>
+                            <div class="textIconCar">
+                                {{ x.price }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
