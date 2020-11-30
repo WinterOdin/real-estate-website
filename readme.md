@@ -3,8 +3,13 @@ Ive wanted to do something with 3D and django filters so i did. Website is small
 
 ## If you wanna check it out...
 [Just click here website is live](http://realestate9123.pythonanywhere.com/)
+
 ##OR
 Download repo and do a quick pip install -r requirements.txt (python 3.6.8)
 
 
 ### 📚 Looking for my Resume? E-Mail me!
+
+![front](https://raw.githubusercontent.com/WinterOdin/real-estate-website-with-django-filter-and-some-3d/master/screenshots/front.png)
+![apartmentList](https://raw.githubusercontent.com/WinterOdin/real-estate-website-with-django-filter-and-some-3d/master/screenshots/listView.png)
+![detail view](https://raw.githubusercontent.com/WinterOdin/real-estate-website-with-django-filter-and-some-3d/master/screenshots/detailView.png)
