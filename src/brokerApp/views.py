@@ -14,7 +14,7 @@ def home(request):
     return render(request,'home.html', context)
 
 def apartments(request):
-    property_data = Property.objects.all()
+    property_data = Property.objects.filter(renting="no")
     myFilter = PropertyFilter()
     
     if request.method == 'GET':
@@ -30,7 +30,7 @@ def apartments(request):
 
 def apartmentDetail(request,pk):
 
-    property_data = Property.objects.filter(renting="no")
+    property_data = Property.objects.filter(id=pk)
     if request.method == "POST":
         name   = request.POST.get('name')
         email  = request.POST.get('email')
