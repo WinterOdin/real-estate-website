@@ -1,1 +1,87 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block content  %}
+{% for x in data  %}
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<div class="grid-container-generated">
+    <div class="leftContent">
+        <div class="content3D">
+            <model-viewer src="{% static 'css/scene.gltf' %}" alt="A 3D model of a house" auto-rotate camera-controls poster="{{x.poster}}" auto-rotate-delay="0" rotation-per-second="40deg"></model-viewer>
+        </div>
+    </div>
+    <div class="rightContent">
+      <div class="rightTextContent">
+          <div class="rightTextWrapper">
+            <div class="rightTextTitle">
+                {{ x.city  }} <span class="underline"><i>{{ x.street  }}</i></span>
+              </div>
+              <div class="rightTextAbout">{{ x.about  }}</div>
+          </div>
+      </div>
+      <div class="linkContent">
+          <a href="{% url 'apartments'  %}"><span class="underline"><i>BACK</i></span></a>
+      </div>
+      <div class="propertyInfo">
+          <div class="propertyWrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                      <div class="propertyDetailInfo">
+                          Property Type
+                      </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="propertyDetailInfoContent">
+                          {{ x.place_type  }}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="propertyDetailInfo">
+                      Property Price
+                    </div>
+                  </div>
+                  <div class="col-6">
+                      <div class="propertyDetailInfoContent">
+                          {{ x.price  }} /mnth
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-6">
+                    <div class="propertyDetailInfo">
+                      Property Size
+                    </div>
+                  </div>
+                  <div class="col-6">
+                      <div class="propertyDetailInfoContent">
+                          {{ x.size }}
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+      </div>
+      <div class="bottomArrow">
+        <div class="arrowDetail">
+            <i class="fas fa-arrow-down"></i>
+        </div>
+      </div>
+    </div>
+    <div class="bottomLeftContent">
+        <div class="bottomLeftWrapper">
+            That's 3D model of your house
+        </div>
+        <div class="bottomPlay">
+            play with it
+        </div>
+    </div>
+</div>
+{% include 'apartmentCarousel.html' %}
+
+{% endfor  %}
+{% endblock  %}
+
+
 

@@ -22,7 +22,18 @@
     </div>
     <div class="container-fluid ">
       <div class="row">
+        {% if data.count == 0 %}
+        <div class="errorBox">
+          <div class="errorTextTitle">
+            404 No properties found
+          </div>
+          <div class="errorTextText">
+            Unfortunately there is no available apartments that match your criteria.<br /><a href="{% url 'apartments'  %}">Reset your filter</a> 
+          </div>
+        </div>
+        {% else %}
         {% include 'apartmentList.html'  %}
+        {% endif %}
       </div>
     </div>
   </div>

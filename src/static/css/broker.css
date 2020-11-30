@@ -8,6 +8,19 @@
     font-size: 18px;
     padding-left: 3%;
 }
+.errorBox{
+    margin-top: 30vh;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+.errorTextTitle{
+    font-weight: 700;
+    font-size: 22px;
+}
+.errorTextText{
+    font-weight: 500;
+    font-size: 18px;
+}
 .MKPWrapper{
     width: 100%;
     height: 100%;
